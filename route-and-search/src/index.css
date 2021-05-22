@@ -14,5 +14,81 @@ font-family: "Lato", sans-serif; */
 }
 
 body {
-  background-color: white;
+  background-color: lightgray;
+}
+
+/*Navbar*/
+.nav {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #325288;
+  padding: 10px;
+  text-align: center;
+}
+.logo {
+  display: flex;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-size: 20px;
+  margin: 23px 0px 0px 8px;
+  color: white;
+  text-align: center;
+}
+
+.search-container {
+  margin-top: 15px;
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+.nav-item ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-item ul li {
+  float: right;
+  font-size: 20px;
+  color: white;
+  margin: 25px 20px 0 0;
+}
+.nav-item ul li Link {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
