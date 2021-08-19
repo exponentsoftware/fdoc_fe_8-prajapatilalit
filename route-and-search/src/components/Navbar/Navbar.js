@@ -13,11 +13,11 @@ const Navbar = () => {
             />
             <span className="sp">Music-Gallery</span>
           </Link>
-          <div class="search-container">
+          <div className="search-container">
             <form>
               <input type="text" placeholder="Search.." name="search" />
               <button type="submit">
-                <i class="fa fa-search"></i>
+                <i className="fa fa-search"></i>
               </button>
             </form>
           </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
               <Link to="/">
                 <li>Home</li>
               </Link>
-              <Link to="/addAlbum">
+              <Link to="/addalbum">
                 <li>AddAlbum</li>
               </Link>
               <Link to="/albums">
