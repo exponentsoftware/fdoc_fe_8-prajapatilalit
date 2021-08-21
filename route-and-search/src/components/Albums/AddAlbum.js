@@ -57,8 +57,8 @@ class AddAlbum extends Component {
   render() {
     return (
       <>
-        <div className="form-header">
-          <form onSubmit={this.handleSubmit}>
+        <div className="addAlbum-header">
+          <form onSubmit={this.handleSubmit} className="addAlbum-form">
             <h2>Add Album Here</h2>
             <input
               type="text"
