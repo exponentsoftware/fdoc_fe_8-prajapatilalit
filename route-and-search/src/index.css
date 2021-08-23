@@ -48,29 +48,33 @@ body {
 }
 
 .search-container {
-  margin-top: 0px;
+  margin-top: 12px;
 }
 
 .search-container input[type="text"] {
   width: 450px;
-  padding: 6px 8px 6px 8px;
+  padding: 6px 8px;
   font-size: 17px;
-  border: none;
+  background: #fff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .search-container button {
   float: right;
   padding: 6px 10px;
-  margin-right: 16px;
-  background: #ddd;
+  /* margin-right: 16px; */
+  background: #fff;
   font-size: 17px;
-  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: 0px;
   cursor: pointer;
 }
 
-.search-container button:hover {
+/* .search-container button:hover {
   background: #ccc;
-}
+} */
 
 .nav-item ul {
   list-style-type: none;
