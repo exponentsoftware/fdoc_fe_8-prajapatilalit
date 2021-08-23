@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   return (
@@ -13,14 +14,7 @@ const Navbar = () => {
             />
             <span className="sp">Music-Gallery</span>
           </Link>
-          <div className="search-container">
-            <form>
-              <input type="text" placeholder="Search.." name="search" />
-              <button type="submit">
-                <i className="fa fa-search"></i>
-              </button>
-            </form>
-          </div>
+          <SearchBar />
 
           <div className="nav-item">
             <ul>
