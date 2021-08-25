@@ -19,7 +19,7 @@ class SearchBar extends Component {
         <form onSubmit={this.onInputSubmit}>
           <input
             type="text"
-            placeholder="Search.."
+            placeholder="Search album by artist and album title ..."
             name="search"
             onChange={this.inputSearchHandle}
             value={this.state.searchText}
