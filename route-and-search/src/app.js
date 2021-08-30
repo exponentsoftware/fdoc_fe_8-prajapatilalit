@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 class App extends Component {
   state = {
     albums: albumList,
+    searchList: "",
   };
 
   addAlbum = (albumItem) => {
@@ -22,14 +23,26 @@ class App extends Component {
     });
     this.setState({ albums: removeArr });
   };
+
+  searchAlbum = (searchText) => {
+    const searchAlbum = [...this.state.albums].find((searchItem) =>
+      searchItem.album === searchText || searchItem.artist === searchText
+        ? searchItem
+        : ""
+    );
+    this.setState({ searchList: searchAlbum });
+  };
   render() {
     return (
       <>
         <BrowserRouter>
-          <Navbar />
+          <Navbar onSearch={this.searchAlbum} />
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Home
+                searchList={this.state.searchList}
+                removeAlbum={this.removeAlbum}
+              />
             </Route>
             <Route exact path="/addalbum">
               <div className="container">

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import axios from "axios";
 
 class SearchBar extends Component {
   state = {
@@ -11,6 +12,12 @@ class SearchBar extends Component {
 
   onInputSubmit = (e) => {
     e.preventDefault();
+
+    // const searchResult = this.props.search({
+    //   searchText: this.state.searchText,
+    // });
+    // this.setState({ searchResult: searchResult });
+    // console.log(searchResult);
   };
 
   render() {
@@ -24,7 +31,10 @@ class SearchBar extends Component {
             onChange={this.inputSearchHandle}
             value={this.state.searchText}
           />
-          <button type="submit">
+          <button
+            type="submit"
+            onClick={() => this.props.search(this.state.searchText)}
+          >
             <i className="fa fa-search"></i>
           </button>
         </form>
