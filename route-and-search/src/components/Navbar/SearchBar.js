@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import axios from "axios";
 
 class SearchBar extends Component {
   state = {
@@ -12,12 +11,7 @@ class SearchBar extends Component {
 
   onInputSubmit = (e) => {
     e.preventDefault();
-
-    // const searchResult = this.props.search({
-    //   searchText: this.state.searchText,
-    // });
-    // this.setState({ searchResult: searchResult });
-    // console.log(searchResult);
+    this.setState({ searchText: "" });
   };
 
   render() {
@@ -38,6 +32,33 @@ class SearchBar extends Component {
             <i className="fa fa-search"></i>
           </button>
         </form>
+        <div className="album_item">
+          {this.props.searchItem === "" ? (
+            ""
+          ) : (
+            <div className="album">
+              <div className="album_info">
+                <img
+                  src={this.props.searchItem.albumCover}
+                  alt="Album-cover"
+                  className="album_img"
+                />
+                <p className="album-title">{this.props.searchItem.album}</p>
+                <span className="album_artist">
+                  {this.props.searchItem.artist}
+                </span>
+                <button
+                  className="btn mt"
+                  onClick={() =>
+                    this.props.searchItem.removeItem(this.props.searchItem.id)
+                  }
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     );
   }

@@ -14,7 +14,11 @@ const Navbar = (props) => {
             />
             <span className="sp">Music-Gallery</span>
           </Link>
-          <SearchBar search={props.onSearch} />
+          <SearchBar
+            search={props.onSearch}
+            searchItem={props.searchList}
+            removeItem={props.removeAlbum}
+          />
 
           <div className="nav-item">
             <ul>

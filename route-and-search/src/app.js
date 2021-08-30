@@ -25,9 +25,9 @@ class App extends Component {
   };
 
   searchAlbum = (searchText) => {
-    const searchAlbum = [...this.state.albums].find((searchItem) =>
-      searchItem.album === searchText || searchItem.artist === searchText
-        ? searchItem
+    const searchAlbum = [...this.state.albums].find((albumListItem) =>
+      albumListItem.album === searchText || albumListItem.artist === searchText
+        ? albumListItem
         : ""
     );
     this.setState({ searchList: searchAlbum });
@@ -36,13 +36,14 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Navbar onSearch={this.searchAlbum} />
+          <Navbar
+            onSearch={this.searchAlbum}
+            searchList={this.state.searchList}
+            removeAlbum={this.removeAlbum}
+          />
           <Switch>
             <Route exact path="/">
-              <Home
-                searchList={this.state.searchList}
-                removeAlbum={this.removeAlbum}
-              />
+              <Home />
             </Route>
             <Route exact path="/addalbum">
               <div className="container">
